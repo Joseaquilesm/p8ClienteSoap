@@ -36,7 +36,7 @@ namespace soapClient
                     client.getAllEstudiante().ElementAt(i).nombre + 
                     "    Matricula: " +
                     client.getAllEstudiante().ElementAt(i).matricula);
-                client.
+    
             }
             againOrExit(client);
         }
