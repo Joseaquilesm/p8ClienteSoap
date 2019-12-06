@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://soap.sparkjavasoap.avathartech.com/" targetNamespace="http://soap.sparkjavasoap.avathartech.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getAllEstudiante" type="tns:getAllEstudiante" />
+  <xs:element name="getAllEstudianteResponse" type="tns:getAllEstudianteResponse" />
+  <xs:element name="getAsignatura" type="tns:getAsignatura" />
+  <xs:element name="getAsignaturaResponse" type="tns:getAsignaturaResponse" />
+  <xs:element name="getEstudiante" type="tns:getEstudiante" />
+  <xs:element name="getEstudianteResponse" type="tns:getEstudianteResponse" />
+  <xs:element name="getProfesor" type="tns:getProfesor" />
+  <xs:element name="getProfesorResponse" type="tns:getProfesorResponse" />
+  <xs:element name="holaMundo" type="tns:holaMundo" />
+  <xs:element name="holaMundoResponse" type="tns:holaMundoResponse" />
+  <xs:complexType name="holaMundo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="holaMundoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEstudiante">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getEstudianteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:estudiante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estudiante">
+    <xs:sequence>
+      <xs:element name="matricula" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="profesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cedula" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAsignatura">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAsignaturaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:asignatura" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="asignatura">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clave" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="estudiantes" nillable="true" type="tns:estudiante" />
+      <xs:element name="grupo" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllEstudiante">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllEstudianteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estudiante" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://soap.sparkjavasoap.avathartech.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AcademicoWebServiceService" targetNamespace="http://soap.sparkjavasoap.avathartech.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:7777/ws?xsd=1" namespace="http://soap.sparkjavasoap.avathartech.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getEstudiante">
+    <part name="parameters" element="tns:getEstudiante" />
+  </message>
+  <message name="getEstudianteResponse">
+    <part name="parameters" element="tns:getEstudianteResponse" />
+  </message>
+  <message name="getProfesor">
+    <part name="parameters" element="tns:getProfesor" />
+  </message>
+  <message name="getProfesorResponse">
+    <part name="parameters" element="tns:getProfesorResponse" />
+  </message>
+  <message name="getAllEstudiante">
+    <part name="parameters" element="tns:getAllEstudiante" />
+  </message>
+  <message name="getAllEstudianteResponse">
+    <part name="parameters" element="tns:getAllEstudianteResponse" />
+  </message>
+  <message name="getAsignatura">
+    <part name="parameters" element="tns:getAsignatura" />
+  </message>
+  <message name="getAsignaturaResponse">
+    <part name="parameters" element="tns:getAsignaturaResponse" />
+  </message>
+  <message name="holaMundo">
+    <part name="parameters" element="tns:holaMundo" />
+  </message>
+  <message name="holaMundoResponse">
+    <part name="parameters" element="tns:holaMundoResponse" />
+  </message>
+  <portType name="AcademicoWebService">
+    <operation name="getEstudiante">
+      <input wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getEstudianteRequest" message="tns:getEstudiante" />
+      <output wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getEstudianteResponse" message="tns:getEstudianteResponse" />
+    </operation>
+    <operation name="getProfesor">
+      <input wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getProfesorRequest" message="tns:getProfesor" />
+      <output wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getProfesorResponse" message="tns:getProfesorResponse" />
+    </operation>
+    <operation name="getAllEstudiante">
+      <input wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getAllEstudianteRequest" message="tns:getAllEstudiante" />
+      <output wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getAllEstudianteResponse" message="tns:getAllEstudianteResponse" />
+    </operation>
+    <operation name="getAsignatura">
+      <input wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getAsignaturaRequest" message="tns:getAsignatura" />
+      <output wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/getAsignaturaResponse" message="tns:getAsignaturaResponse" />
+    </operation>
+    <operation name="holaMundo">
+      <input wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/holaMundoRequest" message="tns:holaMundo" />
+      <output wsam:Action="http://soap.sparkjavasoap.avathartech.com/AcademicoWebService/holaMundoResponse" message="tns:holaMundoResponse" />
+    </operation>
+  </portType>
+  <binding name="AcademicoWebServicePortBinding" type="tns:AcademicoWebService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllEstudiante">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAsignatura">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="holaMundo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AcademicoWebServiceService">
+    <port name="AcademicoWebServicePort" binding="tns:AcademicoWebServicePortBinding">
+      <soap:address location="http://localhost:7777/ws" />
+    </port>
+  </service>
+</definitions>
